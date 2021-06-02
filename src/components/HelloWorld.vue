@@ -14,7 +14,7 @@
     </ul>
     <h3>Essential Links</h3>
     <div>
-      <input type="button" value="测试跟新" @click="doit">
+      <input type="button" value="测试更新" @click="doit">
     </div>
     <ul>
       <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
