@@ -13,6 +13,8 @@ cd quality-front
 
 vue add electron-builder (安装electron-builder)
 ```
+![image](https://user-images.githubusercontent.com/36943744/120418403-0a93cf80-c393-11eb-8686-a497f2e82c0d.png)
+
 
 # 编译与调试
 
@@ -200,13 +202,22 @@ module.exports = {
 
 以上提及的http://localhost:7082/为更新地址，该地址放  latest.yml 、新版本.exe、新版本.exe.blockmap
 
-![image-20210602102718999](图片\image-20210602102718999.png)
+![image](https://user-images.githubusercontent.com/36943744/120418423-17182800-c393-11eb-8d3f-4fd23be3f371.png)
 
-修改版本号：package.json    ：version  
+修改版本号：package.json ：version
 
-打包后得到新版本 npm run electron:build  
+打包后得到新版本 npm run electron:build
 
+调试更新问题可以使用 npm run electron:serve
 
+测试流程
+打包版本 0.2.0
+复制三个文件到更新地址
+重新设置回0.1.0
+npm run electron:serve （时间会有点长）
+触发更新，查看提示
 
-调试更新问题可以使用 npm run electron:serve  
+触发后自动升级（下载时看不到提示，如需提示，可尝试修改以上的更新流程代码）
+
+![image](https://user-images.githubusercontent.com/36943744/120418441-1f706300-c393-11eb-8f84-f945059a6ad1.png)
 
